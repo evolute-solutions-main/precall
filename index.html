@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
+img, iframe, video { max-width: 100%; }
 
 :root {
   --yellow: #ffd800;
@@ -221,7 +222,9 @@ body::before {
   gap: 40px;
   align-items: start;
   margin-top: 20px;
+  min-width: 0;
 }
+.hero-testimonial-grid > * { min-width: 0; overflow: hidden; }
 @media (max-width: 700px) {
   .hero-testimonial-grid { grid-template-columns: 1fr; gap: 24px; }
 }
@@ -278,8 +281,7 @@ body::before {
   text-transform: uppercase;
 }
 @media (max-width: 640px) {
-  .hero-testimonial { padding: 36px 28px; }
-  .hero-testimonial::before { font-size: 120px; top: -22px; left: 20px; padding: 0 12px; }
+  .hero-testimonial { padding: 24px 16px; }
 }
 
 /* ============ SECTIONS ============ */
@@ -424,11 +426,14 @@ section.content-section {
   gap: 40px;
   align-items: start;
   padding: 36px 0;
+  min-width: 0;
   border-bottom: 1px solid var(--border);
 }
 .tc:last-child { border-bottom: none; padding-bottom: 0; }
 .tc.tc-flip .tc-text { order: 2; }
 .tc.tc-flip .tc-video { order: 1; }
+.tc-text { min-width: 0; overflow: hidden; }
+.tc-video { min-width: 0; overflow: hidden; }
 .tc-badge {
   display: inline-block;
   background: var(--yellow);
@@ -510,7 +515,7 @@ section.content-section {
 }
 
 /* hero testimonial metric rows */
-.hero-metrics { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+.hero-metrics { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
 .hero-metric {
   display: flex;
   align-items: center;
@@ -519,6 +524,9 @@ section.content-section {
   border: 1px solid rgba(255,216,0,0.2);
   border-radius: 6px;
   padding: 8px 14px;
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
 }
 .hero-metric span {
   background: var(--yellow);
@@ -529,8 +537,16 @@ section.content-section {
   border-radius: 4px;
   font-family: 'JetBrains Mono', monospace;
   white-space: nowrap;
+  flex-shrink: 0;
 }
-.hero-metric-label { font-size: 13px; color: var(--white); }
+.hero-metric-label {
+  font-size: 13px;
+  color: var(--white);
+  flex: 1;
+  min-width: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
 
 /* ============ COMPARISON ============ */
 .comparison {
@@ -606,7 +622,8 @@ section.content-section {
 }
 .system-intro strong { color: var(--yellow); }
 .pillars { display: flex; flex-direction: column; gap: 14px; }
-.pillar { display: grid; grid-template-columns: 88px 1fr; gap: 18px; align-items: stretch; }
+.pillar { display: grid; grid-template-columns: 88px 1fr; gap: 18px; align-items: stretch; min-width: 0; }
+.pillar > * { min-width: 0; }
 .pillar-num {
   background: var(--yellow);
   color: var(--black);
@@ -658,7 +675,7 @@ section.content-section {
   gap: 24px;
   margin-top: 32px;
 }
-.who-card { border-radius: 8px; padding: 36px; border: 1px solid var(--border); }
+.who-card { border-radius: 8px; padding: 36px; border: 1px solid var(--border); min-width: 0; overflow: hidden; word-wrap: break-word; overflow-wrap: break-word; }
 .who-card.is-for {
   background: linear-gradient(135deg, rgba(255,216,0,0.08), rgba(255,216,0,0.02));
   border-color: var(--yellow-dim);
@@ -717,6 +734,10 @@ section.content-section {
   border-radius: 6px;
   padding: 26px;
   border-left: 3px solid;
+  min-width: 0;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .ps-card.problem { border-color: var(--red); }
 .ps-card.solution { border-color: var(--yellow); }
