@@ -108,6 +108,7 @@ body::before {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(40px, 7vw, 80px);
   line-height: 0.98;
+  text-align: center;
   letter-spacing: -0.005em;
   margin-bottom: 32px;
   text-transform: uppercase;
@@ -920,8 +921,8 @@ section.content-section {
   <div class="container hero-content">
 
     <h1>
-      Before our call,
-      <span class="highlight">there are a few mandatory steps for you to complete.</span>
+      You're in.
+      <span class="highlight">Just one last step before our call.</span>
     </h1>
 
     <p class="hero-message">
@@ -930,6 +931,19 @@ section.content-section {
 
     <div class="hero-warning">
       If you're not able to do this before our call, we'll need to pick a different time. Just takes a few minutes.
+    </div>
+
+    <!-- VIDEO (directly after warning) -->
+    <div class="video-section">
+      <div style="text-align:center;margin-bottom:12px;">
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--yellow);letter-spacing:0.15em;">👇 WATCH THIS FIRST 👇</span>
+      </div>
+      <div class="video-frame">
+        <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/15cd96fbec2046b799181b7f12dc7f53" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+      </div>
+      <p class="video-hint">
+        Once you've watched the video, <span class="y">scroll down to keep going ↓</span>
+      </p>
     </div>
 
     <!-- 3 STEPS -->
@@ -959,40 +973,13 @@ section.content-section {
       </div>
     </div>
 
-    <!-- VIDEO (directly after steps) -->
-    <div class="video-section">
-      <div style="text-align:center;margin-bottom:12px;">
-        <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--yellow);letter-spacing:0.15em;">👇 WATCH THIS FIRST 👇</span>
-      </div>
-      <div class="video-frame">
-        <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/15cd96fbec2046b799181b7f12dc7f53" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-      </div>
-      <p class="video-hint">
-        Once you've watched the video, <span class="y">scroll down to keep going ↓</span>
-      </p>
-    </div>
-
     <!-- HERO TESTIMONIAL (single standout after video) -->
     <div class="hero-testimonial">
       <div class="hero-testimonial-label">DiChiara Builders — 3rd Generation</div>
       <div class="hero-testimonial-grid">
         <div>
-          <div class="hero-metrics">
-            <div class="hero-metric"><span>$2,853</span><span class="hero-metric-label">Total ad spend</span></div>
-            <div class="hero-metric"><span>$2.1M+</span><span class="hero-metric-label">Estimates sent in under 2 months</span></div>
-            <div class="hero-metric"><span>$500K+</span><span class="hero-metric-label">Closed contracts from 25 appointments</span></div>
-            <div class="hero-metric"><span>2026</span><span class="hero-metric-label">Already booked out all year</span></div>
-          </div>
-          <div class="hero-testimonial-quote">
-            Everybody's seeing it. My dad got approached at Walgreens — they <strong>recognized him from our Facebook ads.</strong>
-          </div>
-          <div class="hero-testimonial-attr">
-            <div class="hero-testimonial-avatar">C</div>
-            <div class="hero-testimonial-info">
-              <h5>Chris DiChiara / DiChiara Builders</h5>
-              <span>$2.8K Ads → $500K+ Closed · 2026 Fully Booked</span>
-            </div>
-          </div>
+          <div class="tc-headline">$2.8K in ads → $500K+ closed. $2.1M in estimates. Booked out all of 2026.</div>
+          <blockquote class="tc-quote">"Everybody's seeing it. My dad got approached at Walgreens — they recognized him from our Facebook ads."</blockquote>
         </div>
         <div class="tc-video-wrap">
           <div class="video-16-9">
@@ -1045,14 +1032,8 @@ section.content-section {
     <div class="tc">
       <div class="tc-text">
         <span class="tc-badge">Brian — BE Decking & Construction · Rochester, NY</span>
-        <div class="tc-headline">$200K Pipeline. $45K Signed. First Month.</div>
-        <p class="tc-meta">Brian was throwing money at radio ads and getting nothing predictable. Within 30 days of plugging in, the pipeline exploded.</p>
-        <div class="tc-metrics">
-          <div class="tc-metric"><span class="tc-num">$200K+</span><span class="tc-label">In new project pipeline within the first 30 days</span></div>
-          <div class="tc-metric"><span class="tc-num">$45K</span><span class="tc-label">Already signed, locked in, and on the schedule</span></div>
-          <div class="tc-metric"><span class="tc-num">0</span><span class="tc-label">Missed calls — AI picks up, qualifies, and books while Brian's on the job</span></div>
-        </div>
-        <blockquote class="tc-quote">"We were doing radio ads before this. There's no comparison — this is next level. The AI answers every call, sets up all the appointments. We just show up and close. I'm genuinely excited about the future with these guys."</blockquote>
+        <div class="tc-headline">Over $200K added to the pipeline in the first month.</div>
+        <blockquote class="tc-quote">"We were doing radio ads before this. There's no comparison — this is next level. We just show up and close."</blockquote>
       </div>
       <div class="tc-video">
         <div class="tc-video-wrap">
@@ -1129,14 +1110,8 @@ section.content-section {
     <div class="tc">
       <div class="tc-text">
         <span class="tc-badge">Elliot — South Banks Builders</span>
-        <div class="tc-headline">Leads Coming In Faster Than He Could Quote Them.</div>
-        <p class="tc-meta">Elliot was skeptical. He'd heard the pitch before. But Max delivered on everything — and then some. The real problem? He couldn't keep up.</p>
-        <div class="tc-metrics">
-          <div class="tc-metric"><span class="tc-num">~50%</span><span class="tc-label">Close rate — closing nearly half of every estimate he went on</span></div>
-          <div class="tc-metric"><span class="tc-num">Too many</span><span class="tc-label">Qualified jobs coming in — faster than he could send quotes</span></div>
-          <div class="tc-metric"><span class="tc-num">$10–40K+</span><span class="tc-label">Per project, flowing in on repeat</span></div>
-        </div>
-        <blockquote class="tc-quote">"I was skeptical at first — I've heard promises before. But they did everything they said they would, and honestly more than I expected. The leads and jobs were coming in so fast I literally couldn't keep up with the estimates. That's the kind of problem you want to have."</blockquote>
+        <div class="tc-headline">Jobs flowing in faster than he could quote them. 50% close rate.</div>
+        <blockquote class="tc-quote">"They did everything they said they would, and honestly more than I expected. I literally couldn't keep up with the estimates. That's the kind of problem you want to have."</blockquote>
       </div>
       <div class="tc-video">
         <div class="tc-video-wrap">
@@ -1149,14 +1124,8 @@ section.content-section {
     <div class="tc tc-flip">
       <div class="tc-text">
         <span class="tc-badge">Brandon — 517Handyman · Michigan</span>
-        <div class="tc-headline">"Holy Sh*t — I Got So Many Appointments. This Is Crazy."</div>
-        <p class="tc-meta">Brandon had tried everything. Nothing worked. Then he found Max — and within 2 weeks his phone wouldn't stop. After plugging in:</p>
-        <div class="tc-metrics">
-          <div class="tc-metric"><span class="tc-num">20</span><span class="tc-label">Appointments in the first 2 weeks — he was floored</span></div>
-          <div class="tc-metric"><span class="tc-num">$24.43</span><span class="tc-label">Cost per appointment — 50+ booked from just $1,300 in spend</span></div>
-          <div class="tc-metric"><span class="tc-num">$70K</span><span class="tc-label">Budget prospect booked by AI — without Brandon lifting a finger</span></div>
-        </div>
-        <blockquote class="tc-quote">"I've tried so many things and nothing has worked like this. I'm honored to be working with Max — he knows exactly what he's doing. Holy sh*t man, I got so many appointments, this is crazy. I can't believe how fast this moved."</blockquote>
+        <div class="tc-headline">50+ appointments from $1,300 in ad spend.</div>
+        <blockquote class="tc-quote">"Holy sh*t man, I got so many appointments, this is crazy. I can't believe how fast this moved."</blockquote>
       </div>
       <div class="tc-video">
         <div class="tc-video-wrap">
@@ -1209,14 +1178,8 @@ section.content-section {
     <div class="tc">
       <div class="tc-text">
         <span class="tc-badge">Nate — Cool Services Remodeling · Colorado</span>
-        <div class="tc-headline">11 Appointments in the First Couple Weeks. $93K Deck. 200% More Leads.</div>
-        <p class="tc-meta">Nate had strong craftsmanship but no system to land bigger projects consistently. After plugging in:</p>
-        <div class="tc-metrics">
-          <div class="tc-metric"><span class="tc-num">11–12</span><span class="tc-label">Qualified appointments in the first couple weeks</span></div>
-          <div class="tc-metric"><span class="tc-num">$93K</span><span class="tc-label">Deck project generated from the system</span></div>
-          <div class="tc-metric"><span class="tc-num">200%</span><span class="tc-label">Increase in lead flow</span></div>
-        </div>
-        <blockquote class="tc-quote">"The leads started coming in fast — 11, 12 appointments in the first couple weeks. We landed a $93K deck job. The volume is real and it doesn't stop."</blockquote>
+        <div class="tc-headline">11 appointments in the first two weeks.</div>
+        <blockquote class="tc-quote">"The volume is real and it doesn't stop."</blockquote>
       </div>
       <div class="tc-video">
         <div class="tc-video-wrap">
@@ -1311,14 +1274,8 @@ section.content-section {
     <div class="tc">
       <div class="tc-text">
         <span class="tc-badge">Matt — Contractor · New York</span>
-        <div class="tc-headline">Leads Came In Like a Snowball. Proven in the First Week.</div>
-        <p class="tc-meta">Matt had never run ads before. Within days of turning them on, his phone was blowing up. After plugging in:</p>
-        <div class="tc-metrics">
-          <div class="tc-metric"><span class="tc-num">4</span><span class="tc-label">Real in-home estimates booked in the first few days</span></div>
-          <div class="tc-metric"><span class="tc-num">Day 1</span><span class="tc-label">Leads hit while he was still getting set up</span></div>
-          <div class="tc-metric"><span class="tc-num">Week 1</span><span class="tc-label">Already proven — "once it happens, it happens"</span></div>
-        </div>
-        <blockquote class="tc-quote">"It kinda hit me by storm with all the leads that came in on the first day. Once it happens, it happens and you gotta be ready for it. You're a f***ing genius man — it's awesome. In the first week, it's like proven."</blockquote>
+        <div class="tc-headline">Leads hit on day one. Proven by the end of the first week.</div>
+        <blockquote class="tc-quote">"It hit me by storm with all the leads on the first day. Once it happens, it happens and you gotta be ready for it."</blockquote>
       </div>
       <div class="tc-video">
         <div class="tc-video-wrap">
@@ -1331,13 +1288,7 @@ section.content-section {
     <div class="tc tc-flip">
       <div class="tc-text">
         <span class="tc-badge">AB6 Roofing — Texas</span>
-        <div class="tc-headline">Lost $25K to Other Agencies. Then Found Max. First Commercial Job: $300K+.</div>
-        <p class="tc-meta">AB6 had been burned — badly. Threw $25K at agencies that did nothing. Max was the first person who actually walked the walk. After plugging in:</p>
-        <div class="tc-metrics">
-          <div class="tc-metric"><span class="tc-num">10+</span><span class="tc-label">Roofing jobs closed in the first 30 days</span></div>
-          <div class="tc-metric"><span class="tc-num">$300K+</span><span class="tc-label">First commercial contract landed — the kind of job that changes a business</span></div>
-          <div class="tc-metric"><span class="tc-num">$8–14K</span><span class="tc-label">Profit per roof, stacking month over month</span></div>
-        </div>
+        <div class="tc-headline">10+ roofing jobs closed in 30 days. First commercial job: $300K+.</div>
         <blockquote class="tc-quote">"I spent $25,000 on agencies that did nothing. Max is different — he actually walks the walk. He told me what he was going to do, he did it, and then he went beyond it. The commercial jobs we're landing now are life-changing. This guy is the real deal."</blockquote>
       </div>
       <div class="tc-video">
@@ -1351,14 +1302,8 @@ section.content-section {
     <div class="tc">
       <div class="tc-text">
         <span class="tc-badge">Chris DiChiara — DiChiara Builders · 3rd Generation</span>
-        <div class="tc-headline">$800K+ in Active Bids. On Track to Multi-Million.</div>
-        <p class="tc-meta">3rd generation builder — went from zero ads to more work than he can handle. After plugging in:</p>
-        <div class="tc-metrics">
-          <div class="tc-metric"><span class="tc-num">$800K+</span><span class="tc-label">Active bids in pipeline right now</span></div>
-          <div class="tc-metric"><span class="tc-num">$500K</span><span class="tc-label">Already closed from this system</span></div>
-          <div class="tc-metric"><span class="tc-num">Multi-M</span><span class="tc-label">On track to become a multi-million dollar company</span></div>
-        </div>
-        <blockquote class="tc-quote">"The AI bot is like an employee picking up the front end for me. My dad got approached at Walgreens — 'are you that guy from Facebook?' Everybody's seeing it. I've got 800 grand in bids right now. You gave me the kick in the ass I needed."</blockquote>
+        <div class="tc-headline">$800K+ in active bids. $500K closed. On track to multi-million.</div>
+        <blockquote class="tc-quote">"The AI bot is like an employee picking up the front end for me. Everybody's seeing it. You gave me the kick in the ass I needed."</blockquote>
       </div>
       <div class="tc-video">
         <div class="tc-video-wrap">
@@ -1371,13 +1316,7 @@ section.content-section {
     <div class="tc tc-flip">
       <div class="tc-text">
         <span class="tc-badge">Steve & Chris — Ashton Kitchen & Bath · Maryland</span>
-        <div class="tc-headline">$500K+ in Estimates. Six Figures Closed. Opened a Brand New Showroom.</div>
-        <p class="tc-meta">Steve and Chris were doing quality work but couldn't scale past referrals. The system gave them a real pipeline — and the business took off. After plugging in:</p>
-        <div class="tc-metrics">
-          <div class="tc-metric"><span class="tc-num">$500K+</span><span class="tc-label">In luxury kitchen & bath estimates generated</span></div>
-          <div class="tc-metric"><span class="tc-num">6 Fig+</span><span class="tc-label">Closed in high-end remodel contracts</span></div>
-          <div class="tc-metric"><span class="tc-num">New</span><span class="tc-label">Showroom + design studio opened — business grew into a physical space</span></div>
-        </div>
+        <div class="tc-headline">$500K+ in estimates. Six figures closed. Opened a brand new showroom.</div>
         <blockquote class="tc-quote">"We went from relying on word of mouth to having a real system behind us. The pipeline is consistent, the jobs are quality, and we've grown enough to open our own showroom. This changed the trajectory of our business."</blockquote>
       </div>
       <div class="tc-video">
