@@ -424,18 +424,24 @@ section.content-section {
 }
 
 /* ============ TC: TESTIMONIAL CARDS WITH VIDEO ============ */
-.tc {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: start;
-  padding: 36px 0;
-  min-width: 0;
-  border-bottom: 1px solid var(--border);
+.tc-masonry {
+  columns: 1;
+  gap: 24px;
 }
-.tc:last-child { border-bottom: none; padding-bottom: 0; }
-.tc.tc-flip .tc-text { order: 2; }
-.tc.tc-flip .tc-video { order: 1; }
+@media (min-width: 701px) {
+  .tc-masonry { columns: 2; }
+}
+.tc-masonry > * { break-inside: avoid; margin-bottom: 24px; }
+.tc {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  min-width: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
 .tc-text { min-width: 0; overflow: hidden; }
 .tc-video { min-width: 0; overflow: hidden; }
 .tc-badge {
@@ -1021,58 +1027,140 @@ section.content-section {
   </div>
 </section>
 
-<!-- PROOF INTERLUDE 1 -->
+<!-- ALL TESTIMONIALS -->
 <div class="proof-interlude">
   <div class="container">
     <div class="proof-label">What Our Partners Say</div>
-    <div class="tc">
-      <div class="tc-text">
-        <span class="tc-badge">Brian — BE Decking & Construction · Rochester, NY</span>
-        <div class="tc-headline">Over $200K added to the pipeline in the first month.</div>
-        <blockquote class="tc-quote">"We were doing radio ads before this. There's no comparison — this is next level. We just show up and close."</blockquote>
-      </div>
-      <div class="tc-video">
-        <div class="tc-video-wrap">
-          <div class="video-9-16">
-            <iframe src="https://www.loom.com/embed/742edf5691ad429e9df054180334f4a2?sid=ecc43f96-3d6a-4b82-9d4a-551838d3f59b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+    <div class="tc-masonry">
 
-<!-- PROOF INTERLUDE 2 -->
-<div class="proof-interlude">
-  <div class="container">
-    <div class="proof-label">Real Results</div>
-    <div class="tc">
-      <div class="tc-text">
-        <span class="tc-badge">Elliot — South Banks Builders</span>
-        <div class="tc-headline">Jobs flowing in faster than he could quote them. 50% close rate.</div>
-        <blockquote class="tc-quote">"They did everything they said they would, and honestly more than I expected. I literally couldn't keep up with the estimates. That's the kind of problem you want to have."</blockquote>
-      </div>
-      <div class="tc-video">
-        <div class="tc-video-wrap">
-          <div class="video-16-9">
-            <iframe src="https://www.loom.com/embed/4b140ab19f3840659ae92653e421a8b5?sid=3a02441c-34e1-442a-a6bf-7cebbafc6674" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <!-- 1. Brian -->
+      <div class="tc">
+        <div class="tc-text">
+          <span class="tc-badge">Brian — BE Decking & Construction · Rochester, NY</span>
+          <div class="tc-headline">Over $200K added to the pipeline in the first month.</div>
+          <blockquote class="tc-quote">"We were doing radio ads before this. There's no comparison — this is next level. We just show up and close."</blockquote>
+        </div>
+        <div class="tc-video">
+          <div class="tc-video-wrap">
+            <div class="video-9-16">
+              <iframe src="https://www.loom.com/embed/742edf5691ad429e9df054180334f4a2?sid=ecc43f96-3d6a-4b82-9d4a-551838d3f59b" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="tc tc-flip">
-      <div class="tc-text">
-        <span class="tc-badge">Brandon — 517Handyman · Michigan</span>
-        <div class="tc-headline">50+ appointments from $1,300 in ad spend.</div>
-        <blockquote class="tc-quote">"Holy sh*t man, I got so many appointments, this is crazy. I can't believe how fast this moved."</blockquote>
-      </div>
-      <div class="tc-video">
-        <div class="tc-video-wrap">
-          <div class="video-16-9">
-            <iframe src="https://www.loom.com/embed/e4372c2a0c674d4a8c15cfa3f803b686" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+      <!-- 2. Matt -->
+      <div class="tc">
+        <div class="tc-text">
+          <span class="tc-badge">Matt — Contractor · New York</span>
+          <div class="tc-headline">Leads hit on day one. Proven by the end of the first week.</div>
+          <blockquote class="tc-quote">"It hit me by storm with all the leads on the first day. Once it happens, it happens and you gotta be ready for it."</blockquote>
+        </div>
+        <div class="tc-video">
+          <div class="tc-video-wrap">
+            <div class="video-16-9">
+              <iframe src="https://www.loom.com/embed/63ae708801d646f78440a3db4e110b2c" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- 3. AB6 -->
+      <div class="tc">
+        <div class="tc-text">
+          <span class="tc-badge">AB6 Roofing — Texas</span>
+          <div class="tc-headline">10+ roofing jobs closed in 30 days. First commercial job: $300K+.</div>
+          <blockquote class="tc-quote">"I spent $25,000 on agencies that did nothing. Max is different — he actually walks the walk. He told me what he was going to do, he did it, and then he went beyond it. The commercial jobs we're landing now are life-changing. This guy is the real deal."</blockquote>
+        </div>
+        <div class="tc-video">
+          <div class="tc-video-wrap">
+            <div class="video-16-9">
+              <iframe src="https://www.loom.com/embed/0f7a08cc92b340b58860289d59eef658" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Nate -->
+      <div class="tc">
+        <div class="tc-text">
+          <span class="tc-badge">Nate — Cool Services Remodeling · Colorado</span>
+          <div class="tc-headline">11 appointments in the first two weeks.</div>
+          <blockquote class="tc-quote">"The volume is real and it doesn't stop."</blockquote>
+        </div>
+        <div class="tc-video">
+          <div class="tc-video-wrap">
+            <div class="video-16-9">
+              <iframe src="https://www.loom.com/embed/882628ad547c4788b1dbfa98f32dee4c?sid=e78429a9-e2ae-4619-acb2-d1f963a76149" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Elliot -->
+      <div class="tc">
+        <div class="tc-text">
+          <span class="tc-badge">Elliot — South Banks Builders</span>
+          <div class="tc-headline">Jobs flowing in faster than he could quote them. 50% close rate.</div>
+          <blockquote class="tc-quote">"They did everything they said they would, and honestly more than I expected. I literally couldn't keep up with the estimates. That's the kind of problem you want to have."</blockquote>
+        </div>
+        <div class="tc-video">
+          <div class="tc-video-wrap">
+            <div class="video-16-9">
+              <iframe src="https://www.loom.com/embed/4b140ab19f3840659ae92653e421a8b5?sid=3a02441c-34e1-442a-a6bf-7cebbafc6674" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Brandon -->
+      <div class="tc">
+        <div class="tc-text">
+          <span class="tc-badge">Brandon — 517Handyman · Michigan</span>
+          <div class="tc-headline">50+ appointments from $1,300 in ad spend.</div>
+          <blockquote class="tc-quote">"Holy sh*t man, I got so many appointments, this is crazy. I can't believe how fast this moved."</blockquote>
+        </div>
+        <div class="tc-video">
+          <div class="tc-video-wrap">
+            <div class="video-16-9">
+              <iframe src="https://www.loom.com/embed/e4372c2a0c674d4a8c15cfa3f803b686" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Chris DiChiara -->
+      <div class="tc">
+        <div class="tc-text">
+          <span class="tc-badge">Chris DiChiara — DiChiara Builders · 3rd Generation</span>
+          <div class="tc-headline">$800K+ in active bids. $500K closed. On track to multi-million.</div>
+          <blockquote class="tc-quote">"The AI bot is like an employee picking up the front end for me. Everybody's seeing it. You gave me the kick in the ass I needed."</blockquote>
+        </div>
+        <div class="tc-video">
+          <div class="tc-video-wrap">
+            <div class="video-16-9">
+              <iframe src="https://www.loom.com/embed/9b36846eb8124882bbe99311568dbee2" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Steve & Chris -->
+      <div class="tc">
+        <div class="tc-text">
+          <span class="tc-badge">Steve & Chris — Ashton Kitchen & Bath · Maryland</span>
+          <div class="tc-headline">$500K+ in estimates. Six figures closed. Opened a brand new showroom.</div>
+          <blockquote class="tc-quote">"We went from relying on word of mouth to having a real system behind us. The pipeline is consistent, the jobs are quality, and we've grown enough to open our own showroom. This changed the trajectory of our business."</blockquote>
+        </div>
+        <div class="tc-video">
+          <div class="tc-video-wrap">
+            <div class="video-16-9">
+              <iframe src="https://www.loom.com/embed/1a2588703d2049aa84e929f43f8ff9e1?sid=f5e2d807-6c85-4593-b21a-2fa2fe56b553" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
@@ -1167,26 +1255,6 @@ section.content-section {
   </div>
 </section>
 
-<!-- PROOF INTERLUDE 3 -->
-<div class="proof-interlude">
-  <div class="container">
-    <div class="proof-label">Overflow Volume</div>
-    <div class="tc">
-      <div class="tc-text">
-        <span class="tc-badge">Nate — Cool Services Remodeling · Colorado</span>
-        <div class="tc-headline">11 appointments in the first two weeks.</div>
-        <blockquote class="tc-quote">"The volume is real and it doesn't stop."</blockquote>
-      </div>
-      <div class="tc-video">
-        <div class="tc-video-wrap">
-          <div class="video-16-9">
-            <iframe src="https://www.loom.com/embed/882628ad547c4788b1dbfa98f32dee4c?sid=e78429a9-e2ae-4619-acb2-d1f963a76149" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- 04: SUMMARY (Scaling Is Simple) -->
 <section class="content-section">
@@ -1234,68 +1302,6 @@ section.content-section {
 </section>
 
 
-<!-- MORE PARTNERS (bottom proof block after all content) -->
-<div class="proof-interlude">
-  <div class="container">
-    <div class="proof-label">More From Our Partners</div>
-    <div class="tc">
-      <div class="tc-text">
-        <span class="tc-badge">Matt — Contractor · New York</span>
-        <div class="tc-headline">Leads hit on day one. Proven by the end of the first week.</div>
-        <blockquote class="tc-quote">"It hit me by storm with all the leads on the first day. Once it happens, it happens and you gotta be ready for it."</blockquote>
-      </div>
-      <div class="tc-video">
-        <div class="tc-video-wrap">
-          <div class="video-16-9">
-            <iframe src="https://www.loom.com/embed/63ae708801d646f78440a3db4e110b2c" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="tc tc-flip">
-      <div class="tc-text">
-        <span class="tc-badge">AB6 Roofing — Texas</span>
-        <div class="tc-headline">10+ roofing jobs closed in 30 days. First commercial job: $300K+.</div>
-        <blockquote class="tc-quote">"I spent $25,000 on agencies that did nothing. Max is different — he actually walks the walk. He told me what he was going to do, he did it, and then he went beyond it. The commercial jobs we're landing now are life-changing. This guy is the real deal."</blockquote>
-      </div>
-      <div class="tc-video">
-        <div class="tc-video-wrap">
-          <div class="video-16-9">
-            <iframe src="https://www.loom.com/embed/0f7a08cc92b340b58860289d59eef658" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="tc">
-      <div class="tc-text">
-        <span class="tc-badge">Chris DiChiara — DiChiara Builders · 3rd Generation</span>
-        <div class="tc-headline">$800K+ in active bids. $500K closed. On track to multi-million.</div>
-        <blockquote class="tc-quote">"The AI bot is like an employee picking up the front end for me. Everybody's seeing it. You gave me the kick in the ass I needed."</blockquote>
-      </div>
-      <div class="tc-video">
-        <div class="tc-video-wrap">
-          <div class="video-16-9">
-            <iframe src="https://www.loom.com/embed/9b36846eb8124882bbe99311568dbee2" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="tc tc-flip">
-      <div class="tc-text">
-        <span class="tc-badge">Steve & Chris — Ashton Kitchen & Bath · Maryland</span>
-        <div class="tc-headline">$500K+ in estimates. Six figures closed. Opened a brand new showroom.</div>
-        <blockquote class="tc-quote">"We went from relying on word of mouth to having a real system behind us. The pipeline is consistent, the jobs are quality, and we've grown enough to open our own showroom. This changed the trajectory of our business."</blockquote>
-      </div>
-      <div class="tc-video">
-        <div class="tc-video-wrap">
-          <div class="video-16-9">
-            <iframe src="https://www.loom.com/embed/1a2588703d2049aa84e929f43f8ff9e1?sid=f5e2d807-6c85-4593-b21a-2fa2fe56b553" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 <!-- 05: ABOUT -->
